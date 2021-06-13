@@ -88,7 +88,7 @@
 			},
 			  
 			buttonClick (e) {
-				console.log(e)
+				console.log(e);
 				this.options[2].info++
 			},
 			
