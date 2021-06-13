@@ -1,0 +1,61 @@
+.container{
+		background-color: #efeeef;
+	}
+	.lunbo{
+		background-color: #fff ;
+		height: 420rpx;
+	}
+	.nav{
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		padding: 30rpx 0 40rpx 0;
+		.navItem { 
+			flex: 1;
+			text-align: center;
+			.iconStyle{
+				background-color: #c41e00;
+				border-radius: 50%;
+				width: 100rpx;
+				height: 100rpx;
+				margin: auto;
+				.icon{
+					transform: translate(0%, 45%);
+					color: #FFF;
+					font-size: 48rpx;
+				}
+			}
+		}
+	}
+	.recommend{
+		background-color: #ffffff;
+		text-align: center;
+		font-size: 40rpx;
+		letter-spacing: 40rpx;
+		color: #d81e06;
+		margin: 10rpx 0;
+		padding: 20rpx 0;
+		font-weight: 600;
+	}
+	.goods{
+		display: flex;
+		flex-wrap: wrap;
+		.goodsCard{
+			width: 50%;
+			// flex: 1;
+			.goodsTitle{
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				-webkit-box-orient: vertical;
+			}
+			.sellPrice{
+				color: red;
+			}
+		}
+	}
+	.message{
+		color: #999999;
+		text-align: center;
+	}

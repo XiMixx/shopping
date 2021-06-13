@@ -1,0 +1,1 @@
+<view><view class="infoDetail"><view class="title">{{infoDetail.title}}</view><view class="timeClick"><view class="time">{{infoDetail.add_time}}</view><view class="click">{{"浏览："+infoDetail.click}}</view></view><view><rich-text nodes="{{infoDetail.content}}"></rich-text></view></view></view>

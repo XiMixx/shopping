@@ -1,0 +1,22 @@
+.goods{
+		display: flex;
+		flex-wrap: wrap;
+		.goodsCard{
+			width: 50%;
+			// flex: 1;
+			.goodsTitle{
+				display: -webkit-box;
+				-webkit-line-clamp: 2;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				-webkit-box-orient: vertical;
+			}
+			.sellPrice{
+				color: red;
+			}
+		}
+	}
+	.message{
+		color: #999999;
+		text-align: center;
+	}
