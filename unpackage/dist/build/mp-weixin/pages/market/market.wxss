@@ -1,0 +1,1 @@
+.goods{display:-webkit-box;display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap}.goods .goodsCard{width:50%}.goods .goodsCard .goodsTitle{display:-webkit-box;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical}.goods .goodsCard .sellPrice{color:red}.message{color:#999;text-align:center}

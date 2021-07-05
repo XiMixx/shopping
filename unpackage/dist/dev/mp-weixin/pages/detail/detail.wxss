@@ -38,7 +38,7 @@
   bottom: 0;
   width: 100%;
 }
-.detail #content .gomeImgLoad {
+.detail #content .gomeImgLoad, .detail #content .err-product {
   width: 100%;
 }
 

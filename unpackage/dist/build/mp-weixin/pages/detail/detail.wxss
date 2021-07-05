@@ -1,0 +1,1 @@
+.container{background-color:#eeedef}.lunbo, .data, .detail, .goodsCart{background-color:#fff}.data{margin:10rpx 0}.goodsCart{position:fixed;bottom:0;width:100%}.detail #content .gomeImgLoad, .detail #content .err-product{width:100%}

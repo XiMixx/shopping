@@ -35,39 +35,48 @@
 <script>
 	export default {
 	    data () {
-	      return {
-	        options: [{
-	            icon: 'headphones',
-	            text: '客服'
-	        }, {
-	            icon: 'shop',
-	            text: '店铺',
-	            info: 2,
-	            infoBackgroundColor:'#007aff',
-	            infoColor:"red"
-	        }, {
-	            icon: 'cart',
-	            text: '购物车',
-	            info: 2
-	        }],
-	        buttonGroup: [{
-	          text: '加入购物车',
-	          backgroundColor: '#ff0000',
-	          color: '#fff'
-	        },
-	        {
-	          text: '立即购买',
-	          backgroundColor: '#ffa200',
-	          color: '#fff'
-	        }],
-			item:{},
-			lunbos:[],
-			lunboMessage:'',
-			detailList:[],
-			message:'',
-			contentList:'',
-			contentMessage:'',
-	      }
+			return {
+				options: [
+					{
+						id:'headphones',
+						icon: 'headphones',
+						text: '客服'
+					}, {
+						id:'shop',
+						icon: 'shop',
+						text: '店铺',
+						infoBackgroundColor:'#007aff',
+						infoColor:"red"
+					}, {
+						id:'cart',
+						icon: 'cart',
+						text: '购物车',
+						info: 0
+					},
+				],
+				buttonGroup: [
+					{
+						id:'addToCart',
+						text: '加入购物车',
+						backgroundColor: '#ff0000',
+						color: '#fff'
+					},
+					{
+						id:'buyNow',
+						text: '立即购买',
+						backgroundColor: '#ffa200',
+						color: '#fff'
+					},
+				],
+				item:{},
+				lunbos:[],
+				lunboMessage:'',
+				detailList:[],
+				message:'',
+				contentList:'',
+				contentMessage:'',
+				cartGoods:[],
+			}
 	    },
 		onLoad(options) {
 			this.item = JSON.parse(options.item);
@@ -81,15 +90,31 @@
 			},
 			
 			onClick (e) {
+				console.log(e);
 				uni.showToast({
 				  title: `点击${e.content.text}`,
 				  icon: 'none'
-				})
+				});
+				if(e.content.id === "cart"){
+					uni.switchTab({
+						url:'/pages/shoppingCart/shoppingCart',
+						success: (res) => {
+							console.log(res)
+						},
+						fail: (err) => {
+							console.log(err)
+						}
+					});
+				}
 			},
 			  
 			buttonClick (e) {
 				console.log(e);
-				this.options[2].info++
+				if(e.content.id === "addToCart"){
+					this.options[2].info++;
+					this.cartGoods = [this.options[2].info,this.item.id];
+				}
+				console.log(this.cartGoods)
 			},
 			
 			async getLunbo(){
@@ -146,9 +171,9 @@
 		bottom: 0;
 		width: 100%;
 	}
-	.detail{
-		#content{
-			.gomeImgLoad{
+	.detail {
+		#content {
+			.gomeImgLoad,.err-product  {
 				width: 100%;
 			}
 		}

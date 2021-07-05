@@ -1,0 +1,1 @@
+<view><view data-event-opts="{{[['tap',[['getUser',['$event']]]]]}}" class="user" bindtap="__e"><view class="userImg"><image class="img" src="{{avatarUrl}}" mode></image></view><view class="userInfo"><view class="userName">{{''+userName+''}}</view></view></view></view>
